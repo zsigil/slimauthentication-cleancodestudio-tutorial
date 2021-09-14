@@ -16,8 +16,8 @@ return function(App $app){
     }
 
     $app->get('/home', function(Request $request, Response $response, $args){
-        return view($response, 'auth.home');
-
+        $name = "Cleancode Studio";
+        return view($response, 'auth.home', compact('name'));
     });
 
     $app->get('/', function (Request $request, Response $response, $args) {

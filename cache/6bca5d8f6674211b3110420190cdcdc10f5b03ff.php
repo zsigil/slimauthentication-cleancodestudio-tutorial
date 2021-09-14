@@ -4,7 +4,8 @@
 
     <div style="padding: 10px;">
         <p>
-            Auth page
+            Auth page for <?php echo e($name); ?>
+
         </p>
     </div>
 <?php $__env->stopSection(); ?>
