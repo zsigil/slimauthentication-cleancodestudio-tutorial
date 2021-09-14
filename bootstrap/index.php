@@ -1,9 +1,7 @@
 <?php
 
 use DI\Container;
-use Slim\Factory\AppFactory;
-
-use app\Models\User;
+use DI\Bridge\Slim\Bridge as SlimAppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -12,9 +10,7 @@ $container = new Container;
 $settings = require __DIR__.'/../app/settings.php';
 $settings($container);
 
-Appfactory::setContainer($container);
-
-$app = AppFactory::create();
+$app = SlimAppFactory::create($container);
 
 $middleware = require __DIR__.'/../app/middleware.php';
 $middleware($app);

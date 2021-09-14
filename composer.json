@@ -19,6 +19,9 @@
     "slim/psr7": "^1.4",
     "php-di/php-di": "^6.3",
     "php-di/slim-bridge": "^3.1",
-    "jenssegers/blade": "^1.4"
+    "jenssegers/blade": "^1.4",
+    "php": "^7.4",
+    "ext-curl": "*",
+    "ext-json": "*"
   }
 }

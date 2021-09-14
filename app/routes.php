@@ -3,6 +3,8 @@ use Slim\App;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
+use app\Http\Controllers\WelcomeController;
+
 return function(App $app){
 
     $app->get('/home', function(Request $request, Response $response, $args){
@@ -10,10 +12,7 @@ return function(App $app){
         return view($response, 'auth.home', compact('name'));
     });
 
-    $app->get('/', function (Request $request, Response $response, $args) {
-        $response->getBody()->write("Hello world");
-        return $response;
-    });
+    $app->get('/', [WelcomeController::class, 'index']);
 }
 
 ?>
