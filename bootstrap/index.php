@@ -3,6 +3,8 @@
 use DI\Container;
 use Slim\Factory\AppFactory;
 
+use app\Models\User;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 $container = new Container;
